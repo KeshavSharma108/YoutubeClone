@@ -1,5 +1,4 @@
 export default {
-    SPLASH: "Splash",
-    HOME: 'Home'
-  };
-  
+  SPLASH: "Splash",
+  HOME: "Home",
+};

@@ -4,7 +4,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import config from "../config";
 import { Home, Splash } from "../Screens";
 
-
 const Stack = createNativeStackNavigator();
 
 export default function rootNavigation() {

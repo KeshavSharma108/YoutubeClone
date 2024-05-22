@@ -1,3 +1,3 @@
 import RootNavigation from "./rootNavi";
 
-export { RootNavigation}
+export { RootNavigation };

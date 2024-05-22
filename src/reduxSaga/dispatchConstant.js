@@ -1,3 +1,3 @@
-export default{
-    VIDEO_LIST:'VideoList'
-}
+export default {
+  VIDEO_LIST: "VideoList",
+};

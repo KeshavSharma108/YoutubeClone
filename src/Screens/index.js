@@ -1,4 +1,4 @@
 import { Splash } from "./splash";
 import { Home } from "./Home";
 
-export { Splash, Home}
+export { Splash, Home };
