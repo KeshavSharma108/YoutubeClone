@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { SafeAreaView, View, StyleSheet, Image } from "react-native";
+import { SafeAreaView, View, StyleSheet, Image, Text } from "react-native";
 import { youtubeIcon } from "../../assests/images";
 import config from "../../config";
 import { StackActions } from "@react-navigation/native";
@@ -12,9 +12,9 @@ const Splash = ({ navigation }) => {
   }, []);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View>
-        <Image source={youtubeIcon} style={styles.imageContainer} />
+    <SafeAreaView style={styles.mainContainer}>
+      <View style={styles.container}>
+        <Text style={styles.title}>BOUBOULENA CREATIVE</Text>
       </View>
     </SafeAreaView>
   );
@@ -23,13 +23,26 @@ const Splash = ({ navigation }) => {
 export default Splash;
 
 const styles = StyleSheet.create({
-  container: {
+  mainContainer: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor:'#DBB5B5'
+  },
+  container: {
+    height: 50,
+    width: "99%",
+    borderWidth: 5,
+    backgroundColor: "black",
+    borderColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
   },
   imageContainer: {
     height: 120,
     width: 120,
+  },
+  title: {
+    color: "white",
   },
 });
