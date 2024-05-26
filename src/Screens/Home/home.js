@@ -17,6 +17,7 @@ import dispatchConstant from "../../reduxSaga/dispatchConstant";
 import { VideoData } from "../../reduxState";
 import config from "../../config";
 import { AntDesign } from "@expo/vector-icons";
+import { AppLoader } from "../../Component";
 
 const Home = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -48,6 +49,7 @@ const Home = ({ navigation }) => {
       })
       .filter((section) => section.data.length > 0);
     setFilteredData(filtered);
+
   };
 
   useEffect(() => {
@@ -107,23 +109,30 @@ const Home = ({ navigation }) => {
       <View style={styles.videoContainer}>
         <TouchableOpacity
           onPress={() =>
+          (
             navigation.navigate(config.routes.VIDEO_PLAYER, {
               videoLink: item.url,
               title: item.p_name,
               description: item.p_desc,
               created: item.created_at,
               create: item.create_at,
-            })
+            }))
+                 // Clear the search bar
+
+              
+            
           }
+          
         >
           <Image source={{ uri: item.p_image }} style={styles.imageStyle} />
-        </TouchableOpacity>
+        
         <Text style={styles.titleName}>
           Title: <Text style={styles.subLine}>{item.p_name}</Text>
         </Text>
         <Text style={styles.titleName}>
           Discription: <Text style={styles.subLine}> {item.p_desc}</Text>
         </Text>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -176,6 +185,7 @@ const Home = ({ navigation }) => {
                 handleBlur();
               } else {
                 handleFocus();
+          
               }
             }}
           >
